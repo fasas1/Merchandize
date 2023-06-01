@@ -84,7 +84,7 @@ namespace Merchantdized.Data
                  Name = "Iphone 14",
                  Description = "Iphone 14 - 512gb Storage - Factory Unlock - Pacific Blue Color - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
                  Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574593/Iphone_14_bwnejg.png",
-                 Price = 56000,
+                 Price = 560000,
                  Category = "Iphone",
 
              }, new Product
