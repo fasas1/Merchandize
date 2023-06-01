@@ -18,92 +18,92 @@ namespace Merchantdized.Data
              new Product
              {
                  Id = 1,
-                 Name = "Spring Roll",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/spring roll.jpg",
-                 Price = 7.99,
-                 Category = "Appetizer",
+                 Name = "Macbook Pro",
+                 Description = "2017 Macbook Pro - Corei5 - 16gb RAM - 512gb SSD - Touchbar - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574595/Macbook_Pro_vvbq1q.png",
+                 Price = 380000,
+                 Category = "Macbook",
 
              }, new Product
              {
                  Id = 2,
-                 Name = "Idli",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/idli.jpg",
-                 Price = 8.99,
-                 Category = "Appetizer",
+                 Name = "Asus ROG",
+                 Description = "Asus ROG Strix G713M - 32gb RAM - 1tb SSD - Ryzen 7 - 11th Generation - RGB Backlit - 6gb Nvidia RTX 3060 - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574594/Asus_ROG_owaj4r.png",
+                 Price = 760000,
+                 Category = "Gaming PC",
 
              }, new Product
              {
                  Id = 3,
-                 Name = "Panu Puri",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/pani puri.jpg",
-                 Price = 8.99,
-                 Category = "Appetizer",
+                 Name = "Iphone 13Pro",
+                 Description = "Iphoe 13Pro - 512gb Storage - Factory Unlock - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574592/Iphone_13_Promax_i8mop8.png",
+                 Price = 420000,
+                 Category = "Iphone",
 
              }, new Product
              {
                  Id = 4,
-                 Name = "Hakka Noodles",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/hakka noodles.jpg",
-                 Price = 10.99,
-                 Category = "Entrée",
+                 Name = "Alienware M15",
+                 Description = "Alienware M15 R7 - 16gb RAM - 512gb SSD - 10th Generation - 6gb Nvidia RTX 2080 - RGB Backlit - Factory Unlock - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574591/Alienware_ijwzbh.png",
+                 Price = 530000,
+                 Category = "Gaming PC",
 
              }, new Product
              {
                  Id = 5,
-                 Name = "Malai Kofta",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/malai kofta.jpg",
-                 Price = 12.99,
-                 Category = "Entrée",
+                 Name = "Iwatch",
+                 Description = "Iwatch Series 7 - 44MM - GPS and Cellular - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574593/iwatch_i9c7sp.png",
+                 Price = 240000,
+                 Category = "Iwatch",
 
              }, new Product
              {
                  Id = 6,
-                 Name = "Paneer Pizza",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/paneer pizza.jpg",
-                 Price = 11.99,
-                 Category = "Entrée",
+                 Name = "HP Pavillion",
+                 Description = "Pavillion 15 - 16gb RAM - 512gb SSD - 4gb Nvidia GTX 1060 - 9th Generation - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574591/HP_Pavillion_nyey1g.png",
+                 Price = 360000,
+                 Category = "Gaming PC",
 
              }, new Product
              {
                  Id = 7,
-                 Name = "Paneer Tikka",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/paneer tikka.jpg",
-                 Price = 13.99,
-                 Category = "Entrée",
+                 Name = "HP Elitebook",
+                 Description = "HP Elitebook 1030 G2 - Corei5 - 16gb RAM - 25gbg SSD - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574591/HP_14_tohtif.png",
+                 Price = 250000,
+                 Category = "Laptop",
 
              }, new Product
              {
                  Id = 8,
-                 Name = "Carrot Love",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/carrot love.jpg",
-                 Price = 4.99,
-                 Category = "Dessert",
+                 Name = "Iphone 14",
+                 Description = "Iphone 14 - 512gb Storage - Factory Unlock - Pacific Blue Color - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574593/Iphone_14_bwnejg.png",
+                 Price = 56000,
+                 Category = "Iphone",
 
              }, new Product
              {
                  Id = 9,
-                 Name = "Rasmalai",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/rasmalai.jpg",
-                 Price = 4.99,
-                 Category = "Dessert",
+                 Name = "Dell G7",
+                 Description = "Dell G7 Gaming Laptop - Corei7 - 16gb RAM - 512gb SSD - 6gb Nvidia RTX 2070 - 10th Generation - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574591/Dell_G7_r9ugk7.png",
+                 Price = 485000,
+                 Category = "Gaming PC",
 
              }, new Product
              {
                  Id = 10,
-                 Name = "Sweet Rolls",
-                 Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                 Image = "https://dotnetmasteryimages.blob.core.windows.net/redmango/sweet rolls.jpg",
-                 Price = 3.99,
-                 Category = "Dessert",
+                 Name = "Macbook Pro",
+                 Description = "2019 Macbook Pro - 16gb RAM - 512gb SSD - Touchbar - Pickup available at  No. 1 Kodeosho street, Obafemi Awolowo way Ikeja, Computer Village, Lagos State.",
+                 Image = "https://res.cloudinary.com/dgsjzsrw4/image/upload/v1685574593/Mabook_Pro_aicpdz.png",
+                 Price = 455000,
+                 Category = "Macbook",
              }
              );
 
