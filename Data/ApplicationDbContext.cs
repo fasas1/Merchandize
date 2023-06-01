@@ -9,5 +9,6 @@ namespace Merchantdized.Data
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
