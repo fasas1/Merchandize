@@ -1,5 +1,6 @@
 ﻿using Merchantdized.Data;
 using Merchantdized.Model;
+using Merchantdized.Model.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -47,9 +48,16 @@ namespace Merchantdized.Controllers
             return Ok(_response);
         }
         [HttpPost]
-        public async Task<ActionResult<ApiResponse>> CreateProduct([FromBody] Product product)
+        public async Task<ActionResult<ApiResponse>> CreateProduct([FromBody] ProductCreateDTO productCreateDTO)
         {
+            try
+            {
 
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
     }
 }

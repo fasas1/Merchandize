@@ -1,13 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Merchantdized.Model
+namespace Merchantdized.Model.DTO
 {
-    public class Product
+    public class ProductCreateDTO
     {
-        [Key]
-        public int Id { get; set; }
-        [Required]
+      
         public string Name { get; set; }
+        [Required]
         public string Description { get; set; }
         public string Category { get; set; }
         [Range(1, int.MaxValue)]

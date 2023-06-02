@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Merchantdized.Model
+namespace Merchantdized.Model.DTO
 {
-    public class Product
+    public class ProductUpdateDTO
     {
         [Key]
         public int Id { get; set; }
