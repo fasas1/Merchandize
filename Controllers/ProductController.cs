@@ -113,5 +113,32 @@ namespace Merchantdized.Controllers
             }
             return _response;
         }
+
+        [HttpPut("{id:int}", Name = "GetProduct")]
+        public async Task<ActionResult<ApiResponse>> DeleteProduct(int id)
+        {
+            try
+            {
+               if(id == 0)
+                {
+                    return BadRequest();
+                }
+                Product productFromDb = await _db.Products.FindAsync(id);
+                if(productFromDb == null)
+                {
+                    return BadRequest();
+                }
+                _db.Products.Remove(productFromDb);
+                _db.SaveChanges();
+                _response.StatusCode = HttpStatusCode.NoContent;
+                return Ok(_response);
+            }
+             catch(Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string> { ex.Message };
+            }
+            return _response;
+        }
     }
 }
