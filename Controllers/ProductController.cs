@@ -47,7 +47,7 @@ namespace Merchantdized.Controllers
             return Ok(_response);
         }
         [HttpPost]
-        public async Task<ActionResult<ApiResponse>> CreateProduct(FromBody)
+        public async Task<ActionResult<ApiResponse>> CreateProduct([FromBody] Product product)
         {
 
         }
