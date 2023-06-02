@@ -35,6 +35,7 @@ namespace Merchantdized.Controllers
             if(id == 0)
             {
                 _response.StatusCode = HttpStatusCode.BadRequest;
+                _response.IsSuccess = false;
                 return BadRequest(_response);
             }
             Product product = _db.Products.FirstOrDefault(u => u.Id == id);
@@ -55,6 +56,8 @@ namespace Merchantdized.Controllers
             {
                 if (productCreateDTO == null)
                 {
+                    _response.StatusCode = HttpStatusCode.BadRequest;
+                    _response.IsSuccess = false;
                     return BadRequest(productCreateDTO);
                 }  
                  Product productToCreate = new()
@@ -87,6 +90,8 @@ namespace Merchantdized.Controllers
             {
                 if (productUpdateDTO == null || id  != productUpdateDTO.Id)
                 {
+                    _response.StatusCode = HttpStatusCode.BadRequest;
+                    _response.IsSuccess = false;
                     return BadRequest();
                 }
                 Product productFromDb = await _db.Products.FindAsync(id);
@@ -121,6 +126,8 @@ namespace Merchantdized.Controllers
             {
                if(id == 0)
                 {
+                    _response.StatusCode = HttpStatusCode.BadRequest;
+                    _response.IsSuccess = false;
                     return BadRequest();
                 }
                 Product productFromDb = await _db.Products.FindAsync(id);
