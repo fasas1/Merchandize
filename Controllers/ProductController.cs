@@ -52,12 +52,31 @@ namespace Merchantdized.Controllers
         {
             try
             {
+                if (productCreateDTO == null)
+                {
+                    return BadRequest(productCreateDTO);
+                }
+                 Product productToCreate = new()
+                {
+                    Name = productCreateDTO.Name,
+                    Price = productCreateDTO.Price,
+                    Category = productCreateDTO.Category,
+                    Image = productCreateDTO.Image,
+                    Description = productCreateDTO.Description
+                };
+                await _db.Products.AddAsync(productToCreate);
+                await _db.SaveChangesAsync();
+                _response.Result = productToCreate;
+                _response.StatusCode = HttpStatusCode.Created;
+                return CreatedAtRoute("GetProduct", new { id = productToCreate.Id }, _response);
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string> { ex.Message };
             }
+            return _response;
         }
     }
 }
