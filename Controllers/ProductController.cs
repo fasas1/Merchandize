@@ -47,6 +47,7 @@ namespace Merchantdized.Controllers
             _response.StatusCode = HttpStatusCode.OK;
             return Ok(_response);
         }
+
         [HttpPost]
         public async Task<ActionResult<ApiResponse>> CreateProduct([FromBody] ProductCreateDTO productCreateDTO)
         {
@@ -55,7 +56,7 @@ namespace Merchantdized.Controllers
                 if (productCreateDTO == null)
                 {
                     return BadRequest(productCreateDTO);
-                }
+                }  
                  Product productToCreate = new()
                 {
                     Name = productCreateDTO.Name,
@@ -70,6 +71,40 @@ namespace Merchantdized.Controllers
                 _response.StatusCode = HttpStatusCode.Created;
                 return CreatedAtRoute("GetProduct", new { id = productToCreate.Id }, _response);
 
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string> { ex.Message };
+            }
+            return _response;
+        }
+
+        [HttpPut("{id:int}", Name = "GetProduct")]
+        public async Task<ActionResult<ApiResponse>> UpdateProduct(int id,[FromBody] ProductUpdateDTO productUpdateDTO)
+        {
+            try
+            {
+                if (productUpdateDTO == null || id  != productUpdateDTO.Id)
+                {
+                    return BadRequest();
+                }
+                Product productFromDb = await _db.Products.FindAsync(id);
+                 if(productFromDb == null)
+                {
+                    return BadRequest();
+                }
+                {
+                    productFromDb.Name = productUpdateDTO.Name;
+                    productFromDb.Price = productUpdateDTO.Price;
+                    productFromDb.Category = productUpdateDTO.Category;
+                    productFromDb.Image = productUpdateDTO.Image;
+                    productFromDb.Description = productUpdateDTO.Description;
+                };
+                  _db.Products.Update(productFromDb);
+                  _db.SaveChanges();
+                  _response.StatusCode = HttpStatusCode.NoContent;
+              
             }
             catch (Exception ex)
             {
