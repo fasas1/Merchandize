@@ -46,5 +46,10 @@ namespace Merchantdized.Controllers
             _response.StatusCode = HttpStatusCode.OK;
             return Ok(_response);
         }
+        [HttpPost]
+        public async Task<ActionResult<ApiResponse>> CreateProduct(FromBody)
+        {
+
+        }
     }
 }
