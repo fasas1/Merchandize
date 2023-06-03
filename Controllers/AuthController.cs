@@ -142,7 +142,7 @@ namespace Rellish.Controllers
             }
             _response.StatusCode = HttpStatusCode.BadRequest;
             _response.IsSuccess = false;
-            _response.ErrorMessages.Add("Error while registering!");
+            _response.ErrorMessages.Add("Error while registering");
             return BadRequest(_response);
         }
     }
