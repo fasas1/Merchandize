@@ -23,7 +23,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
-
 // Set your Cloudinary credentials
 //=================================
 

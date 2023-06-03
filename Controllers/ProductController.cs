@@ -119,7 +119,7 @@ namespace Merchantdized.Controllers
             return _response;
         }
 
-        [HttpPut("{id:int}", Name = "GetProduct")]
+        [HttpDelete("{id:int}", Name = "GetProduct")]
         public async Task<ActionResult<ApiResponse>> DeleteProduct(int id)
         {
             try
