@@ -68,12 +68,12 @@ namespace Rellish.Controllers
             //    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
 
             //};
-            SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
-            LoginResponseDTO loginResponse = new()
-            {
-                Email = userFromDb.Email,
-                Token = tokenHandler.WriteToken(token)
-            };
+            //SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
+            //LoginResponseDTO loginResponse = new()
+            //{
+            //    Email = userFromDb.Email,
+            //    Token = tokenHandler.WriteToken(token)
+            //};
 
             if (loginResponse.Email == null || string.IsNullOrEmpty(loginResponse.Token))
             {
