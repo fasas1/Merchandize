@@ -23,8 +23,8 @@ namespace Rellish.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private string secretKey;
         public AuthController(ApplicationDbContext db, IConfiguration configuration,
-               UserManager<ApplicationUser> userManager,
-               RoleManager<IdentityRole> roleManager)
+            UserManager<ApplicationUser> userManager,
+         RoleManager<IdentityRole> roleManager)
         {
             _db = db;
             secretKey = configuration.GetValue<string>("ApiSettings:Secret");
@@ -37,7 +37,7 @@ namespace Rellish.Controllers
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
         {
             ApplicationUser userFromDb = _db.ApplicationUsers.FirstOrDefault
-                                        (u => u.UserName.ToLower() == model.UserName.ToLower());
+                (u => u.UserName.ToLower() == model.UserName.ToLower());
 
             bool isValid = await _userManager.CheckPasswordAsync(userFromDb, model.Password);
 
@@ -142,7 +142,7 @@ namespace Rellish.Controllers
             }
             _response.StatusCode = HttpStatusCode.BadRequest;
             _response.IsSuccess = false;
-            _response.ErrorMessages.Add("Error while registering");
+            _response.ErrorMessages.Add("Error while registering!");
             return BadRequest(_response);
         }
     }
