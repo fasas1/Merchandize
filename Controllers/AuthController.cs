@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Rellish.Data;
+using Rellish.Models;
+using Rellish.Models.DTO;
 using System.Net;
+using Rellish.Utility;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
-using Merchantdized.Data;
-using Merchantdized.Model.DTO;
-using Merchantdized.Model;
-using Merchantdized.Utility;
 
 namespace Rellish.Controllers
 {
@@ -50,10 +50,10 @@ namespace Rellish.Controllers
                 _response.ErrorMessages.Add("Username already Exixts!");
                 return BadRequest(_response);
             }
-           // Generate JWT Token
+            //Generate JWT Token
             var roles = await _userManager.GetRolesAsync(userFromDb);
             JwtSecurityTokenHandler tokenHandler = new();
-             byte[] key = Encoding.ASCII.GetBytes(secretKey);
+            byte[] key = Encoding.ASCII.GetBytes(secretKey);
 
             SecurityTokenDescriptor tokenDescriptor = new()
             {
