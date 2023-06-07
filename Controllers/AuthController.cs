@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Rellish.Data;
-using Rellish.Models;
-using Rellish.Models.DTO;
 using System.Net;
-using Rellish.Utility;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
+using Merchantdized.Data;
+using Merchantdized.Model.DTO;
+using Merchantdized.Model;
+using Merchantdized.Utility;
 
 namespace Rellish.Controllers
 {
@@ -23,8 +23,8 @@ namespace Rellish.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private string secretKey;
         public AuthController(ApplicationDbContext db, IConfiguration configuration,
-            UserManager<ApplicationUser> userManager,
-         RoleManager<IdentityRole> roleManager)
+                              UserManager<ApplicationUser> userManager,
+                              RoleManager<IdentityRole> roleManager)
         {
             _db = db;
             secretKey = configuration.GetValue<string>("ApiSettings:Secret");
@@ -64,7 +64,7 @@ namespace Rellish.Controllers
                     new Claim(ClaimTypes.Email, userFromDb.UserName.ToString()),
                     new Claim(ClaimTypes.Role, roles.FirstOrDefault()),
                 }),
-                Expires = DateTime.UtcNow.AddDays(7),
+                Expires = DateTime.UtcNow.AddDays(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
 
             };
