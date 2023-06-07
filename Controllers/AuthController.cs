@@ -84,7 +84,7 @@ namespace Rellish.Controllers
             }
             _response.StatusCode = HttpStatusCode.OK;
             _response.IsSuccess = true;
-           // _response.Result = loginResponse;
+            _response.Result = loginResponse;
             return Ok(_response);
         }
 
