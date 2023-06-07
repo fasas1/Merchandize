@@ -50,10 +50,10 @@ namespace Rellish.Controllers
                 _response.ErrorMessages.Add("Username already Exixts!");
                 return BadRequest(_response);
             }
-            ////Generate JWT Token
+            Generate JWT Token
             //var roles = await _userManager.GetRolesAsync(userFromDb);
-            //JwtSecurityTokenHandler tokenHandler = new();
-            //byte[] key = Encoding.ASCII.GetBytes(secretKey);
+            JwtSecurityTokenHandler tokenHandler = new();
+             byte[] key = Encoding.ASCII.GetBytes(secretKey);
 
             //SecurityTokenDescriptor tokenDescriptor = new()
             //{
