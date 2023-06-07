@@ -69,19 +69,19 @@ namespace Rellish.Controllers
 
             //};
             //SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
-            //LoginResponseDTO loginResponse = new()
-            //{
-            //    Email = userFromDb.Email,
-            //    Token = tokenHandler.WriteToken(token)
-            //};
+            LoginResponseDTO loginResponse = new()
+            {
+                Email = userFromDb.Email,
+                Token = "No value yet"  /*tokenHandler.WriteToken(token)*/
+            };
 
-            //if (loginResponse.Email == null || string.IsNullOrEmpty(loginResponse.Token))
-            //{
-            //    _response.StatusCode = HttpStatusCode.BadRequest;
-            //    _response.IsSuccess = false;
-            //    _response.ErrorMessages.Add("Username or Password already Exixts!");
-            //    return BadRequest(_response);
-            //}
+            if (loginResponse.Email == null || string.IsNullOrEmpty(loginResponse.Token))
+            {
+                _response.StatusCode = HttpStatusCode.BadRequest;
+                _response.IsSuccess = false;
+                _response.ErrorMessages.Add("Username or Password already Exixts!");
+                return BadRequest(_response);
+            }
             _response.StatusCode = HttpStatusCode.OK;
             _response.IsSuccess = true;
            // _response.Result = loginResponse;
