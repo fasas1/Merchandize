@@ -85,7 +85,7 @@ namespace Rellish.Controllers
         //    return Ok(_response);
         //}
 
-        [HttpPost("register")]
+        [HttpPost]
         public async Task<IActionResult> Register([FromBody] RegisterRequestDTO model)
         {
             ApplicationUser userFromDb = _db.ApplicationUsers
