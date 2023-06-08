@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using System.Text;
 using Merchantdized.Data;
 using Merchantdized.Model.DTO;
 using Merchantdized.Model;
